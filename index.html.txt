@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Levine &amp; Sons Plumbing | Red Carpet Plumbing Service Since 1927</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --primary: #004f9f;    /* Deep blue */
+      --secondary: #f4b400;  /* Accent gold */
+      --dark: #1f2933;
+      --light: #f8fafc;
+      --muted: #6b7280;
+      --white: #ffffff;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .logo-main {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+
+    .logo-sub {
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.1s ease, box-shadow 0.1s ease,
+        background 0.1s ease, color 0.1s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      box-shadow: 0 10px 20px rgba(0, 79, 159, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 26px rgba(0, 79, 159, 0.3);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--primary);
+      border: 1px solid #d1d5db;
+    }
+
+    .btn-secondary:hover {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: radial-gradient(circle at top left, #e0f2fe 0, #eff6ff 35%, #ffffff 100%);
+      padding: 3rem 1rem 3.5rem;
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-kicker span.icon {
+      display: inline-flex;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--secondary);
+    }
+
+    .hero-title {
+      font-size: clamp(2.1rem, 3vw + 1rem, 3rem);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+      color: #0f172a;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      max-width: 34rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.75rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-badge {
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: #e5f2ff;
+      color: #1d4ed8;
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .hero-media {
+      position: relative;
+    }
+
+    .hero-card {
+      background: var(--white);
+      border-radius: 1.25rem;
+      padding: 1.5rem 1.5rem 1.75rem;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-card-title {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .hero-chip {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      background: #ecfdf5;
+      color: #047857;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .hero-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hero-row-label {
+      color: var(--muted);
+    }
+
+    .hero-row-value {
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .hero-status {
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px dashed #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+
+    .hero-status-pill {
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-weight: 600;
+    }
+
+    .hero-floating-tag {
+      position: absolute;
+      right: -6px;
+      top: 50%;
+      transform: translateY(-50%) rotate(6deg);
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.45rem 0.95rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.25);
+    }
+
+    main {
+      background: var(--white);
+    }
+
+    section {
+      padding: 3rem 1rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+      color: #0f172a;
+    }
+
+    .section-sub {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 34rem;
+      margin: 0.25rem auto 0;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.2fr);
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .text-muted {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .lead {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .list-check {
+      list-style: none;
+      margin-top: 0.75rem;
+    }
+
+    .list-check li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .list-check span.bullet {
+      width: 0.6rem;
+      height: 0.6rem;
+      background: var(--secondary);
+      border-radius: 999px;
+      margin-top: 0.3rem;
+      flex-shrink: 0;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--light);
+      border-radius: 1rem;
+      padding: 1.25rem;
+      border: 1px solid #e5e7eb;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+      color: #111827;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      margin-bottom: 0.3rem;
+      background: #e0f2fe;
+      color: #1d4ed8;
+      font-weight: 600;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .step {
+      padding: 1.25rem;
+      border-radius: 1rem;
+      border: 1px dashed #d1d5db;
+      background: #f9fafb;
+    }
+
+    .step-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .step-title {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .step p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .quote {
+      background: #f9fafb;
+      border-radius: 1rem;
+      border: 1px solid #e5e7eb;
+      padding: 1rem 1.1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .quote-author {
+      font-weight: 600;
+      color: #111827;
+      font-size: 0.85rem;
+    }
+
+    .quote-meta {
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 2.25rem;
+    }
+
+    form {
+      background: #f9fafb;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      border: 1px solid #e5e7eb;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 0.25rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.55rem 0.7rem;
+      border-radius: 0.65rem;
+      border: 1px solid #d1d5db;
+      font-size: 0.9rem;
+      font-family: inherit;
+      transition: border 0.1s ease, box-shadow 0.1s ease;
+      background: var(--white);
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.25);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-footer {
+      margin-top: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      flex-wrap: wrap;
+    }
+
+    .contact-details {
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .contact-details strong {
+      color: #111827;
+    }
+
+    .contact-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.3rem;
+    }
+
+    .contact-badge {
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      background: #eff6ff;
+      color: #1d4ed8;
+    }
+
+    footer {
+      background: #0b1220;
+      color: #9ca3af;
+      padding: 1.5rem 1rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+    }
+
+    .footer-inner span strong {
+      color: #e5e7eb;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer-links a {
+      color: #9ca3af;
+    }
+
+    .footer-links a:hover {
+      color: #e5e7eb;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .split,
+      .card-grid,
+      .steps,
+      .testimonials,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-inner {
+        gap: 2rem;
+      }
+
+      .hero {
+        padding-top: 2.5rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-badges {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .form-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <div class="logo-main">Levine &amp; Sons</div>
+        <div class="logo-sub">Plumbing • Since 1927</div>
+      </div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#process">How It Works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-kicker">
+          <span class="icon"></span> Red Carpet Plumbing Service
+        </div>
+        <h1 class="hero-title">Professional Plumbing You Can Trust.</h1>
+        <p class="hero-sub">
+          Since 1927, Levine &amp; Sons has delivered fast, honest, and reliable
+          plumbing services with the red carpet treatment every customer
+          deserves.
+        </p>
+        <div class="hero-badges">
+          <span class="hero-badge">Family-Owned &amp; Operated</span>
+          <span>Licensed &amp; Insured • Residential &amp; Light Commercial</span>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-primary">Schedule Service</button>
+          <button class="btn-secondary">Get a Free Quote</button>
+        </div>
+        <div class="hero-note">
+          Same-day appointments whenever possible • Respectful, uniformed technicians
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <div class="hero-card-title">Request Service</div>
+            <div class="hero-chip">Fast Response</div>
+          </div>
+          <div class="hero-rows">
+            <div class="hero-row">
+              <div class="hero-row-label">Service Type</div>
+              <div class="hero-row-value">Emergency • Repair • Install</div>
+            </div>
+            <div class="hero-row">
+              <div class="hero-row-label">Typical Arrival</div>
+              <div class="hero-row-value">&lt; 24 hours</div>
+            </div>
+            <div class="hero-row">
+              <div class="hero-row-label">Coverage</div>
+              <div class="hero-row-value">Local Homes &amp; Businesses</div>
+            </div>
+          </div>
+          <div class="hero-status">
+            <span class="hero-status-pill">On-Time, Clean, Respectful</span>
+            <span>Red carpet treatment for every home.</span>
+          </div>
+        </div>
+        <div class="hero-floating-tag">“They treated our home like their own.”</div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="about">
+      <div class="section-inner split">
+        <div>
+          <div class="section-kicker">Our Story</div>
+          <h2 class="section-title">Red Carpet Plumbing Since 1927.</h2>
+          <p class="lead">
+            Levine &amp; Sons was founded by Louis Levine with a simple promise:
+            treat every customer like family and every home like it’s your own.
+          </p>
+          <p class="text-muted">
+            Today, generations later, that tradition still guides everything we
+            do. From the moment we arrive, you’ll notice the difference:
+            protective shoe covers, red carpet protection for your floors, clear
+            communication, and thorough, careful work.
+          </p>
+          <ul class="list-check">
+            <li>
+              <span class="bullet"></span>
+              <span>Family-owned and rooted in our community for nearly a century.</span>
+            </li>
+            <li>
+              <span class="bullet"></span>
+              <span>Respectful technicians who treat your home with care.</span>
+            </li>
+            <li>
+              <span class="bullet"></span>
+              <span>Honest recommendations and upfront pricing before work begins.</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="card">
+            <span class="pill">What you can expect</span>
+            <h3>Professional, clean, and reliable plumbing.</h3>
+            <p>
+              We show up on time, protect your home, fix the problem properly,
+              and leave the work area as clean as we found it.
+            </p>
+            <ul class="list-check" style="margin-top: 0.75rem;">
+              <li>
+                <span class="bullet"></span>
+                <span>Clear explanations of what’s wrong and how we’ll fix it.</span>
+              </li>
+              <li>
+                <span class="bullet"></span>
+                <span>Options that fit your home, your needs, and your budget.</span>
+              </li>
+              <li>
+                <span class="bullet"></span>
+                <span>Workmanship backed by our satisfaction guarantee.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-kicker">Services</div>
+          <h2 class="section-title">Plumbing Services We Offer.</h2>
+          <p class="section-sub">
+            From small leaks to major repairs, Levine &amp; Sons is equipped to
+            handle your plumbing needs quickly and professionally.
+          </p>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Emergency Plumbing</h3>
+            <p>
+              Burst pipes, overflowing toilets, or sudden leaks—call us for fast,
+              reliable emergency service.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Drain Cleaning &amp; Clog Removal</h3>
+            <p>
+              We safely clear clogged sinks, tubs, and main lines so your drains
+              flow like they should.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Water Heater Repair &amp; Replacement</h3>
+            <p>
+              No hot water? We repair and replace traditional and tankless water
+              heaters for dependable comfort.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Bathroom &amp; Kitchen Plumbing</h3>
+            <p>
+              Leaky faucets, running toilets, new fixtures, and more—expert
+              repairs and installations.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Sewer &amp; Water Line Services</h3>
+            <p>
+              We diagnose and address sewer and water line issues to protect your
+              home and property.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Inspections &amp; Maintenance</h3>
+            <p>
+              Catch small issues before they become big problems with routine
+              plumbing checkups.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-us">
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-kicker">Why Choose Us</div>
+          <h2 class="section-title">Why Homeowners Choose Levine &amp; Sons.</h2>
+          <p class="section-sub">
+            It’s not just about fixing the problem—it’s about how you’re treated
+            along the way.
+          </p>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Family-Owned Since 1927</h3>
+            <p>
+              A long, trusted history of serving our community with integrity and
+              care.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Red Carpet Treatment</h3>
+            <p>
+              We respect your home with shoe covers, floor protection, and a
+              thorough clean-up.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Upfront, Honest Pricing</h3>
+            <p>
+              No surprises. We explain the work and cost before any repairs begin.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Licensed &amp; Insured</h3>
+            <p>
+              Professional, qualified plumbers who take your safety seriously.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Friendly, Respectful Technicians</h3>
+            <p>
+              Clear communication, helpful answers, and polite service from start
+              to finish.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Guaranteed Workmanship</h3>
+            <p>
+              We stand behind the quality of our work and want you completely
+              satisfied.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-kicker">How It Works</div>
+          <h2 class="section-title">Simple, Stress-Free Service.</h2>
+          <p class="section-sub">
+            We make it easy to get the plumbing help you need, without the hassle.
+          </p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-label">Step 1</div>
+            <div class="step-title">Contact Us</div>
+            <p>
+              Call or request service online and tell us what’s going on. We’ll
+              ask a few quick questions to understand your issue.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-label">Step 2</div>
+            <div class="step-title">Get a Clear Quote</div>
+            <p>
+              We inspect the problem, explain your options, and give you upfront
+              pricing before any work starts.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-label">Step 3</div>
+            <div class="step-title">Enjoy Peace of Mind</div>
+            <p>
+              We complete the work with red carpet treatment, test everything, and
+              leave your home clean and comfortable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-kicker">Testimonials</div>
+          <h2 class="section-title">What Our Customers Say.</h2>
+          <p class="section-sub">
+            Here’s what homeowners share about their experience with Levine &amp;
+            Sons.
+          </p>
+        </div>
+        <div class="testimonials">
+          <div class="quote">
+            <div>
+              “Levine &amp; Sons treated our home with so much respect. They
+              arrived on time, explained everything clearly, and fixed our leak
+              fast.”
+            </div>
+            <div>
+              <div class="quote-author">Sarah M.</div>
+              <div class="quote-meta">Residential Customer</div>
+            </div>
+          </div>
+          <div class="quote">
+            <div>
+              “Honest pricing, great communication, and no mess left behind. I
+              won’t use anyone else for plumbing work.”
+            </div>
+            <div>
+              <div class="quote-author">James R.</div>
+              <div class="quote-meta">Homeowner</div>
+            </div>
+          </div>
+          <div class="quote">
+            <div>
+              “They really do give the red carpet treatment. Friendly, clean, and
+              professional from start to finish.”
+            </div>
+            <div>
+              <div class="quote-author">Danielle K.</div>
+              <div class="quote-meta">Repeat Customer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-inner contact-grid">
+        <div>
+          <div class="section-kicker">Contact</div>
+          <h2 class="section-title">Ready for Red Carpet Plumbing Service?</h2>
+          <p class="text-muted" style="margin-bottom: 1rem;">
+            Whether it’s a small drip or a major repair, Levine &amp; Sons is
+            ready to help. Share a few details below and we’ll get in touch as
+            soon as possible.
+          </p>
+          <form>
+            <div class="form-row">
+              <div>
+                <label for="name">Full Name</label>
+                <input id="name" type="text" placeholder="John Smith" />
+              </div>
+              <div>
+                <label for="phone">Phone Number</label>
+                <input id="phone" type="tel" placeholder="(555) 555-5555" />
+              </div>
+            </div>
+            <div class="form-row" style="margin-top: 0.75rem;">
+              <div>
+                <label for="email">Email Address</label>
+                <input id="email" type="email" placeholder="you@example.com" />
+              </div>
+              <div>
+                <label for="address">Address</label>
+                <input id="address" type="text" placeholder="Street, City" />
+              </div>
+            </div>
+            <div style="margin-top: 0.75rem;">
+              <label for="message">How can we help you?</label>
+              <textarea id="message" placeholder="Describe your plumbing issue..."></textarea>
+            </div>
+            <div class="form-footer">
+              <button type="submit" class="btn-primary">
+                Request Service Now
+              </button>
+              <span>We respond as quickly as possible during normal business hours.</span>
+            </div>
+          </form>
+        </div>
+        <div class="contact-details">
+          <div>
+            <strong>Call Us</strong><br />
+            (555) 555-5555
+          </div>
+          <div>
+            <strong>Service Hours</strong><br />
+            Monday–Saturday • Emergency support when available.
+          </div>
+          <div>
+            <strong>Why Call Levine &amp; Sons?</strong>
+            <div class="contact-badges">
+              <span class="contact-badge">On-Time Arrival</span>
+              <span class="contact-badge">Respectful Technicians</span>
+              <span class="contact-badge">Red Carpet Protection</span>
+              <span class="contact-badge">Upfront Pricing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>&copy; <strong>Levine &amp; Sons Plumbing</strong>. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
